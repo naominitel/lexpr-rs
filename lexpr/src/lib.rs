@@ -342,8 +342,6 @@ use proc_macro_hack::proc_macro_hack;
 /// ```
 ///
 /// [`Value`]: enum.Value.html
-#[proc_macro_hack]
-pub use lexpr_macros::sexp;
 
 mod syntax;
 
