@@ -26,7 +26,7 @@ pub struct Datum {
 }
 
 impl Datum {
-    pub(crate) fn into_inner(self) -> (Value, SpanInfo) {
+    pub fn into_inner(self) -> (Value, SpanInfo) {
         (self.value, self.info)
     }
 
@@ -253,7 +253,7 @@ impl Span {
 }
 
 #[derive(Debug, Clone, PartialEq)]
-pub(crate) enum SpanInfo {
+pub enum SpanInfo {
     Prim(Span),
     Cons(Span, Box<[SpanInfo; 2]>),
     Vec(Span, Vec<SpanInfo>),

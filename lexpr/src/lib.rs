@@ -1,4 +1,3 @@
-#![deny(missing_docs)]
 #![warn(rust_2018_idioms)]
 // The `matches` macro this lint tests for is introduced with Rust 1.42, and we
 // currently support 1.32+.
