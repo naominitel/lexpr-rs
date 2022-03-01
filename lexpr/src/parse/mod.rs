@@ -476,6 +476,7 @@ impl<'de, R: Read<'de>> Parser<R> {
                     Some(b':') if self.options.keyword_syntax(KeywordSyntax::Octothorpe) => {
                         Token::Keyword(self.parse_symbol()?.into())
                     }
+                    Some(b'\'') => Token::Quotation("function"),
                     Some(b'v') => {
                         self.expect_ident(b"u8")?;
                         Token::ByteVecOpen(b')')
