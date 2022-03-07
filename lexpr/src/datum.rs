@@ -234,7 +234,7 @@ impl Span {
         Span { start, end }
     }
 
-    pub(crate) fn empty() -> Self {
+    pub fn empty() -> Self {
         Span {
             start: Position::new(0, 0),
             end: Position::new(0, 0),
@@ -260,7 +260,7 @@ pub enum SpanInfo {
 }
 
 impl SpanInfo {
-    fn span(&self) -> Span {
+    pub fn span(&self) -> Span {
         match self {
             SpanInfo::Prim(span) => *span,
             SpanInfo::Cons(span, _) => *span,
